@@ -1,0 +1,33 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script type="text/javascript" src="https://rawgithub.com/hiddentao/google-tts/master/google-tts.min.js"></script>
+
+<meta charset='utf-8'>
+<script>
+
+if(annyang) {
+
+    var commands = {
+    'hello': function() {
+        if(Math.random() < 0.5) {
+        responsiveVoice.speak("pishov u dupu");
+        } else {
+        responsiveVoice.speak("pishov u pipu");
+        }
+        console.log('kek')
+    }
+    };
+    
+    annyang.debug();
+    
+    annyang.addCommands(commands);
+
+    annyang.start();
+    
+    document.write('<h1>Say "hello"</h1>')
+    
+} else {
+    document.write('<br>Sorry, your browser is not supported');
+}
+
+</script>
